@@ -8,6 +8,7 @@
     flex-grow: 1;
 
     background-color: grey;
+    background: linear-gradient(to top, #797878 0%, #292b2d 100%);
     margin: 1em;
     padding: 1rem;
     font-size: 12px;
@@ -20,6 +21,7 @@
 .Tile > img{
     transition: 1s;
     border-radius: var(--Bradius);
+    height: 278px;
 }
 
 .Tile:hover{

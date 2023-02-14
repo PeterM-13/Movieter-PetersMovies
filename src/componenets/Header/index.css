@@ -1,0 +1,29 @@
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo{
+    margin: 1rem;
+    color: #00aae8;
+}
+
+
+.backButton{
+    margin: 1rem;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgb(227, 227, 227);
+    outline: 0px;
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+}
+
+.backButton:hover{
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0px 0px 18px 3px #00aae8; /*offset-x offset-y (blur-radius and/or spread-radius=optional) color;*/
+}

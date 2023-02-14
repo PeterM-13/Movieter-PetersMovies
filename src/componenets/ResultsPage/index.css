@@ -1,0 +1,18 @@
+.ResultsPage{
+    
+}
+
+.usersSearch{
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding-top: 10px;
+    color: #00aae8;
+}
+
+.results{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

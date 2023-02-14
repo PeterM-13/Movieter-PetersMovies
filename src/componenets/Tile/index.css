@@ -1,0 +1,42 @@
+:root{
+    --Bradius: 10px;
+
+}
+
+.Tile{
+    flex-basis: 15%;
+    flex-grow: 1;
+
+    background-color: grey;
+    margin: 1em;
+    padding: 1rem;
+    font-size: 12px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Tile > img{
+    transition: 1s;
+    border-radius: var(--Bradius);
+}
+
+.Tile:hover{
+    transition: 0.3s;
+    box-shadow: 0px 0px 18px 2px #00aae8;
+}
+
+p{
+   
+}
+
+a{
+    transition: 0.2s;
+    color: black;
+    font-size: 14px;
+}
+a:hover{
+    transition: 0.3s;
+    
+}

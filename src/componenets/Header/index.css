@@ -2,12 +2,15 @@
 header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
 }
 
 .logo{
     margin: 1rem;
     color: #00aae8;
+    height: 50px;
+    transition: 1s;
+    cursor: pointer;
 }
 
 .backButton{
@@ -27,4 +30,11 @@ header{
     cursor: pointer;
     transition: 0.25s;
     box-shadow: 0px 0px 18px 3px #00aae8; /*offset-x offset-y (blur-radius and/or spread-radius=optional) color;*/
+}
+
+
+@media only screen and (max-width: 500px){
+    header{
+        justify-content: center;
+    }
 }

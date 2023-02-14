@@ -3,10 +3,10 @@ import Tile from "../Tile"
 
 export default function ResultsPage({results, searchInput}){
     if(results.length === 0){
-        searchInput = "No Results";
-      }else{
-        searchInput = `"${searchInput}"`;
-      }
+         searchInput = "No Results";
+       }else{
+         searchInput = ``;
+       }
     return(
         <div className="ResultsPage">
             <h3 className="usersSearch">{searchInput}</h3>

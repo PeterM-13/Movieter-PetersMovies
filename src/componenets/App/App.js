@@ -33,6 +33,22 @@ function App() {
     }
   }
 
+  async function popularMovies(){
+    const apiKey = env.apiKey;
+    const endpoint = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
+  
+    try {
+      const response = await fetch(endpoint);
+      const data = await response.json();
+      const movies = await data.results;
+      setResults(movies);
+      return true;
+
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   async function onEnter(e){
     if(e.key === "Enter"){
       console.log(e.target.value)
@@ -44,21 +60,26 @@ function App() {
     if (searchInput !== '') {
       async function searchForMovies() {
         await searchMovies(searchInput);
-        setSearching(false);
+        //setSearching(false);
       }
       searchForMovies();
     }
   }, [searchInput]);
 
+  useEffect(() => {
+    popularMovies();
+  }, []);
+
   function onBackClick(){
-    setSearching(true)
+    //setSearching(true)
+    popularMovies()
   }
 
   return (
     <div className="App">
       <Header onBackClick={onBackClick} searching={searching}/>
       {searching && <SearchPage onEnter={onEnter}/>}
-      {!searching && <ResultsPage results={results} searchInput={searchInput}/>}
+      {searching && <ResultsPage results={results} searchInput={searchInput}/>}
     </div>
   );
 }

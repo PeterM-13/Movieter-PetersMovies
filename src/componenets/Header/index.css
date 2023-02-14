@@ -1,8 +1,5 @@
-
 header{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
+    text-align: left;
 }
 
 .logo{
@@ -12,26 +9,6 @@ header{
     transition: 1s;
     cursor: pointer;
 }
-
-.backButton{
-    margin: 1rem;
-    border-radius: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background: rgb(227, 227, 227);
-    background: linear-gradient(to top, #797878 0%, #3f4144 100%);
-    outline: 0px;
-    color: rgb(236, 236, 236);
-    transition: 0.3s;
-    font-size: 14px;
-}
-
-.backButton:hover{
-    cursor: pointer;
-    transition: 0.25s;
-    box-shadow: 0px 0px 18px 3px #00aae8; /*offset-x offset-y (blur-radius and/or spread-radius=optional) color;*/
-}
-
 
 @media only screen and (max-width: 500px){
     header{

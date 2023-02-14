@@ -10,7 +10,6 @@ import env from "react-dotenv";
 function App() {
   const [searchInput, setInput] = useState("")
   const [results, setResults] = useState([])
-  const [searching, setSearching] = useState(true)
 
   async function searchMovies(query) {
     const apiKey = env.apiKey;
@@ -23,13 +22,10 @@ function App() {
 
       const data = await response.json();
       const movies = await data.results;
-      //console.log(movies)
       setResults(movies);
-      return true;
 
     } catch (error) {
       console.error("ERROR: ", error);
-      return false;
     }
   }
 
@@ -42,7 +38,6 @@ function App() {
       const data = await response.json();
       const movies = await data.results;
       setResults(movies);
-      return true;
 
     } catch (error) {
       console.error(error);
@@ -51,7 +46,6 @@ function App() {
 
   async function onEnter(e){
     if(e.key === "Enter"){
-      console.log(e.target.value)
       setInput(e.target.value);
     }
   }
@@ -60,7 +54,6 @@ function App() {
     if (searchInput !== '') {
       async function searchForMovies() {
         await searchMovies(searchInput);
-        //setSearching(false);
       }
       searchForMovies();
     }
@@ -71,15 +64,14 @@ function App() {
   }, []);
 
   function onBackClick(){
-    //setSearching(true)
     popularMovies()
   }
 
   return (
     <div className="App">
-      <Header onBackClick={onBackClick} searching={searching}/>
-      {searching && <SearchPage onEnter={onEnter}/>}
-      {searching && <ResultsPage results={results} searchInput={searchInput}/>}
+      <Header onBackClick={onBackClick}/>
+      <SearchPage onEnter={onEnter}/>
+      <ResultsPage results={results} searchInput={searchInput}/>
     </div>
   );
 }

@@ -10,7 +10,9 @@
     background-color: grey;
     background: linear-gradient(to top, #797878 0%, #292b2d 100%);
     margin: 1em;
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
     font-size: 12px;
     border-radius: 10px;
 
@@ -22,6 +24,7 @@
     transition: 1s;
     border-radius: var(--Bradius);
     height: 278px;
+    margin-top: 1.2rem;
 }
 
 .Tile:hover{

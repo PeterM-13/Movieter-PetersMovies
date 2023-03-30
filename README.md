@@ -16,7 +16,7 @@
 ## ▶️ Instructions to run
 1. `npm i`
 2. `npm start`
-- Or visit mine https://movieter.onrender.com/ 🛑(**ALERT**: If you choose to click on film tile to watch, your are redirected to external video-player, which is known to show ***certain*** ads and pop-ups, this is out of my control! **<ins>Ad-blocker is advised.</ins>**)🛑
+<!--- Or visit mine https://movieter.onrender.com/ 🛑(**ALERT**: If you choose to click on film tile to watch, your are redirected to external video-player, which is known to show ***certain*** ads and pop-ups, this is out of my control! **<ins>Ad-blocker is advised.</ins>**)🛑-->
 
 ## 🔑 Environment Variables
 - apiKey (to https://api.themoviedb.org/ API)
